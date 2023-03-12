@@ -7,17 +7,33 @@ h1 {
 }
 
 .accordeon {
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 40%;
+    margin: auto;
 }
 
 .accordeon__item {
-    border: 1px solid black;
-    margin-bottom: 5px;
+    display: block;
+    cursor: pointer;
+}
+
+.accordeon__item:active > .accordeon__img {
+    filter:grayscale(0.5);
+}
+
+.accordeon__item:active > .span__class {
+border-style: solid;
+border-width: 10px 5px 0 5px;
+border-color: #000000 transparent transparent transparent;
+}
+
+
+.accordeon__item:active > .accrodeon__title {
+    color: black;
+    opacity: 0.5;
 }
 
 .accrodeon__title {
-    padding: 10px 15px;
+    padding: 0 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,27 +41,39 @@ h1 {
     color: rgb(40, 0, 240);
 }
 
-.accrodeon__title:after {
-    color: black;
-}
-
 .accordeon__input {
     display: none;
 }
 
 .accordeon__img {
-    max-height: 0;
-    overflow: hidden;
-    padding: 10px 15px;
-    margin: 0 4em;
+  display: flex;
+  justify-content: center;
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-.accordeon__img:hover {
-    max-height: 100vw;
+
+
+.accordeon__item:hover .accordeon__img{
+    height: 50vh;
+    opacity: 1;
 }
 
 .accordeon__input:checked ~ .accordeon__img {
-    max-height: 100vw;
-    transition: 1s;
+    height: 50vh;
+    opacity: 1;
 }
 
+span {
+    opacity: 0;
+}
+
+.accordeon:hover span {
+    opacity: 1;
+}
+
+
+.accordeon__item:hover span {
+    transform: rotate(90deg);
+}
