@@ -25,6 +25,10 @@ h1 {
     color: rgb(40, 0, 240);
 }
 
+.accrodeon__title:after {
+    color: black;
+}
+
 .accordeon__input {
     display: none;
 }
@@ -33,15 +37,15 @@ h1 {
     max-height: 0;
     overflow: hidden;
     padding: 10px 15px;
+    margin: 0 4em;
 }
 
 .accordeon__img:hover {
     max-height: 100vw;
-    transition: 1s ease-in;
 }
 
 .accordeon__input:checked ~ .accordeon__img {
     max-height: 100vw;
-    transition: 1s ease-in;
+    transition: 1s;
 }
 
