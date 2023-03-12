@@ -8,14 +8,28 @@
     <title>CSS Bayan</title>
 </head>
 <body>
+    
     <div class="accordeon">
+        <h1>CSS Bayan</h1>
+        <hr>
         <div class="accordeon__item">
-            <label for="meme_1" class="accrodeon__title">1 картинка</label>
-            <input type="checkbox" class="accordeon__input" name="first__meme" id="meme_1">
+            <input type="checkbox" class="accordeon__input" id="meme_1" checked>
+            <label for="meme_1" class="accrodeon__title">1 картинка <span class="span__class">+</span></label>
+            
             <div class="accordeon__img">
                 <img src="/assets/mem_1.png" alt="first_mem">
             </div>
         </div>
+        <hr>
+        <div class="accordeon__item">
+            <label for="meme_2" class="accrodeon__title">2 картинка</label>
+            <input type="checkbox" class="accordeon__input" id="meme_2">
+                <div class="accordeon__img">
+                <img src="/assets/mem_2.png" alt="first_mem">
+                </div>
+            </input>
+        </div>
+        <hr>
     </div>
 </body>
 </html>
